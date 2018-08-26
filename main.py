@@ -44,13 +44,14 @@ dht_timer = Timer(2)
 enable()
 
 def do_connect():
-    '''method to connect to wifi ap'''
+    '''method to connect to WiFi ap and MQTT broker'''
     if STATION.isconnected():
         STATION.disconnect()
         STATION.active(False)
         sleep(1)
     STATION.active(True)
     STATION.connect(wifi_cred.SSID, wifi_cred.WPA2PSK)
+    # connect to broker
     client.connect()
 
 def alive():
