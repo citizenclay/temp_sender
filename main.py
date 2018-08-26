@@ -5,7 +5,7 @@ from network import WLAN, STA_IF
 from dht import DHT22
 from umqtt_simple import MQTTClient
 from gc import enable, collect
-from . import wifi_cred
+import wifi_cred
 
 # soil sensor enable on pin 13,
 # soil read on pin 33, relay out on pin 12, no longer used
