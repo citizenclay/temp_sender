@@ -3,7 +3,7 @@ from ssd1306 import SSD1306_I2C
 from utime import sleep, time
 from network import WLAN, STA_IF
 from dht import DHT22
-from umqtt.simple import MQTTClient
+from umqtt_simple import MQTTClient
 from gc import enable, collect
 from . import wifi_cred
 
