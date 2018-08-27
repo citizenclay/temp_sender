@@ -91,9 +91,9 @@ def publish_readings():
     try:
         for topic, reading in zip(mqtt_topics, readings):
             client.publish(topic, reading)
-    except AttributeError: # raises if MQTT client isn't connected
+    except AttributeError: # raises if WiFi isn't connected 
         do_connect()
-    except OSError: # raises if WiFi isn't connected (this only works the first time for some reason)
+    except OSError: # raises if MQTT client isn't connected
         client.connect()
 
 def display_readings():
